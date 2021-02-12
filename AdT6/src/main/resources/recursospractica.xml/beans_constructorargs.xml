@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="Ana" class="practica.Alumnos">
+		<constructor-arg name="alumnoNombre" value="Ana Abel"></constructor-arg>
+		<constructor-arg name="alummnoDireccion"
+			value="Paseo de América, 15"></constructor-arg>
+		<constructor-arg name="asignatura" value="Inglés B1"></constructor-arg>
+		<constructor-arg name="nota" value="7"></constructor-arg>
+		<constructor-arg name="horas" value="7"></constructor-arg>
+	</bean>
+	<bean id="Benito" class="practica.Alumnos">
+		<constructor-arg name="alumnoNombre" value="Benito Bueno"></constructor-arg>
+		<constructor-arg name="alummnoDireccion" value="Reyes Católicos, 16"></constructor-arg>
+		<constructor-arg name="asignatura" value="Inglés B2"></constructor-arg>
+		<constructor-arg name="nota" value="6"></constructor-arg>
+		<constructor-arg name="horas" value="7"></constructor-arg>
+	</bean>
+	<bean id="Carmen" class="practica.Alumnos">
+		<constructor-arg name="alumnoNombre" value="Carmen Cano"></constructor-arg>
+		<constructor-arg name="alummnoDireccion" value="Reyes Católicos, 2"></constructor-arg>
+		<constructor-arg name="asignatura" value="Inglés B1"></constructor-arg>
+		<constructor-arg name="nota" value="5"></constructor-arg>
+		<constructor-arg name="horas" value="7"></constructor-arg>
+	</bean>
+	<bean id="Esteban" class="practica.Alumnos">
+		<constructor-arg name="alumnoNombre" value="Esteban Escalera"></constructor-arg>
+		<constructor-arg name="alummnoDireccion"
+			value="Isabel la Católica, 28"></constructor-arg>
+		<constructor-arg name="asignatura" value="Francés B1"></constructor-arg>
+		<constructor-arg name="nota" value="9"></constructor-arg>
+		<constructor-arg name="horas" value="7"></constructor-arg>
+	</bean>
+	<bean id="Francisco" class="practica.Alumnos">
+		<constructor-arg name="alumnoNombre" value="Francisco Farfán"></constructor-arg>
+		<constructor-arg name="alummnoDireccion"
+			value="Cristóbal Colón, s/n"></constructor-arg>
+		<constructor-arg name="asignatura" value="Francés A2"></constructor-arg>
+		<constructor-arg name="nota" value="8.5"></constructor-arg>
+		<constructor-arg name="horas" value="7"></constructor-arg>
+	</bean>
+
+	<bean id="ingles" class="practica.Centro">
+		<constructor-arg name="centroNombre" value="Escuela de inglés"></constructor-arg>
+		<constructor-arg name="centroDireccion" value="Reyes Católicos, 14"></constructor-arg>
+		<constructor-arg name="alumnos">
+			<list>
+				<ref bean="Ana" />
+				<ref bean="Benito" />
+				<ref bean="Carmen" />
+			</list>
+		</constructor-arg>
+	</bean>
+		<bean id="frances" class="practica.Centro">
+		<constructor-arg name="centroNombre" value="Escuela de francés"></constructor-arg>
+		<constructor-arg name="centroDireccion" value="Cristóbal Colón, 92"></constructor-arg>
+		<constructor-arg name="alumnos">
+			<list>
+				<ref bean="Esteban" />
+				<ref bean="Francisco" />
+			</list>
+		</constructor-arg>
+	</bean>
+
+</beans>
