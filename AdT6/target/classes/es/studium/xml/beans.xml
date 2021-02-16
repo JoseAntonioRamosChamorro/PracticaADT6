@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="ing" class="practica.Centro">
+		<property name="centroNombre" value="Escuela de inglés"></property>
+		<property name="centroDireccion" value="Reyes Católicos, 14 "></property>
+		<property name="alumnos">
+			<list>
+				<ref bean="Ana"></ref>
+				<ref bean="Benito"></ref>
+				<ref bean="Carmen"></ref>
+			</list>
+		</property>
+	</bean>
+	<bean id="fran" class="practica.Centro">
+		<property name="centroNombre" value="Escuela de francés"></property>
+		<property name="centroDireccion" value="Cristóbal Colón, 92"></property>
+		<property name="alumnos">
+			<list>
+				<ref bean="Esteban"></ref>
+				<ref bean="Francisco"></ref>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="Ana" class="practica.Alumno">
+		<property name="alumno" value="Ana Abel"></property>
+		<property name="direccion" value="Paseo de América, 15"></property>
+		<property name="asignatura" value="Inglés B1"></property>
+		<property name="nota" value="7"></property>
+		<property name="horas" value="2"></property>
+	</bean>
+	<bean id="Benito" class="practica.Alumno">
+		<property name="alumno" value="Benito Bueno"></property>
+		<property name="direccion" value="Reyes Católicos, 16"></property>
+		<property name="asignatura" value="Inglés B2"></property>
+		<property name="nota" value="6"></property>
+		<property name="horas" value="2"></property>
+	</bean>
+	<bean id="Carmen" class="practica.Alumno">
+		<property name="alumno" value="Carmen Cano"></property>
+		<property name="direccion" value="Reyes Católicos, 2"></property>
+		<property name="asignatura" value="Inglés B1"></property>
+		<property name="nota" value="5"></property>
+		<property name="horas" value="2"></property>
+	</bean>
+
+	<bean id="Esteban" class="practica.Alumno">
+		<property name="alumno" value="Esteban Escalera"></property>
+		<property name="direccion" value="Isabel la Católica, 28"></property>
+		<property name="asignatura" value="Francés B1"></property>
+		<property name="nota" value="9"></property>
+		<property name="horas" value="2"></property>
+	</bean>
+	<bean id="Francisco" class="practica.Alumno">
+		<property name="alumno" value="Francisco Farfán"></property>
+		<property name="direccion" value="Cristóbal Colón, s/n"></property>
+		<property name="asignatura" value="Francés A2"></property>
+		<property name="nota" value="8"></property>
+		<property name="horas" value="2"></property>
+	</bean>
+</beans>

@@ -6,15 +6,15 @@ import java.util.List;
 public class Centro {
 	private String centroNombre;
 	private String centroDireccion;
-	private List<Alumnos> alumnos;
+	private List<Alumno> alumnos;
 
 	public  Centro() {
 		centroNombre = "";
 		centroDireccion = "";
-		alumnos = new ArrayList<Alumnos>();
+		alumnos = new ArrayList<Alumno>();
 	}
 
-	public Centro(String centroNombre, String centroDireccion, List<Alumnos> alumnos) {
+	public Centro(String centroNombre, String centroDireccion, List<Alumno> alumnos) {
 		this.centroNombre = centroNombre;
 		this.centroDireccion = centroDireccion;
 		this.alumnos = alumnos;
@@ -36,11 +36,11 @@ public class Centro {
 		this.centroDireccion = centroDireccion;
 	}
 
-	public List<Alumnos> getAlumnos() {
+	public List<Alumno> getAlumnos() {
 		return alumnos;
 	}
 
-	public void setAlumnos(List<Alumnos> alumnos) {
+	public void setAlumnos(List<Alumno> alumnos) {
 		this.alumnos = alumnos;
 	}
 	public String toString() {
